@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word‑Bloom Book Animation</title>
+  <style>
+    :root {
+      --book-width: min(90vw, 900px);
+      --book-ratio: 3/2;
+      /* width / height */
+      --bg: url("https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1200&q=80");
+    }
+
+    /* ---- LAYOUT ---- */
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #e9e5dc;
+      font-family: "Georgia", "Times New Roman", serif;
+      overflow: hidden;
+    }
+
+    .book {
+      width: var(--book-width);
+      aspect-ratio: var(--book-ratio);
+      position: relative;
+      background-image: var(--bg);
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, .5);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* dim/texture overlay to blend text with page */
+    .book::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(245, 240, 225, .4);
+      mix-blend-mode: overlay;
+      pointer-events: none;
+    }
+
+    .pages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: absolute;
+      inset: 8% 10%;
+      /* leave margins */
+    }
+
+    .page-text {
+      position: relative;
+      color: #2b210d;
+      font-size: clamp(14px, 1.2vw, 22px);
+      line-height: 1.55;
+    }
+
+    .page-text span {
+      opacity: 0;
+      display: inline-block;
+      transform-origin: center bottom;
+      animation: wordBloom 1.8s ease-out forwards;
+    }
+
+    /* ---- KEYFRAME for each word ---- */
+    @keyframes wordBloom {
+      0% {
+        opacity: 0;
+        transform: translateY(18px) scale(.8) rotate(2deg);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateY(-4px) scale(1.05) rotate(0deg);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="book">
+    <div class="pages">
+      <div class="page-text" id="leftPage"></div>
+      <div class="page-text" id="rightPage"></div>
+    </div>
+  </div>
+
+  <script>
+    /* --------------- CONFIG --------------- */
+    const textLeft = `Once upon a time, in a land veiled by mist and legend, a single word awakened the forest. Each syllable stirred the ancient roots and summoned stories long forgotten.`;
+    const textRight = `So, too, will these lines blossom before your eyes. Watch as letters sprout like bright leaves, stretching toward remembrance and revealing the tale hidden between the creases of the page.`;
+
+    /* Helper to explode words into span elements with staggered animation */
+    function populate(pageEl, txt, startDelay = 0) {
+      const words = txt.split(/\s+/);
+      words.forEach((w, i) => {
+        const span = document.createElement('span');
+        span.textContent = w + (i === words.length - 1 ? '' : ' ');
+        span.style.animationDelay = `${startDelay + i * 0.15}s`; // 150ms stagger
+        pageEl.appendChild(span);
+      });
+    }
+
+    populate(document.getElementById('leftPage'), textLeft, 0.3); // small pre-delay
+    populate(document.getElementById('rightPage'), textRight, 1.8); // start after first page blooms
+  </script>
+</body>
+
+</html>

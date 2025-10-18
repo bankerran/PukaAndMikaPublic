@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>כפתור – פתח את הספר</title>
+    <style>
+        :root {
+            --btn-brown: #6e4329;
+            --glow1: #ffea9e;
+            --glow2: #ffc14d;
+        }
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: #111;
+            display: grid;
+            place-items: center;
+            font-family: "Heebo", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        }
+
+        /* --- Button --- */
+        .fire-btn {
+            position: relative;
+            padding: 22px 40px;
+            border: none;
+            border-radius: 18px;
+            color: #fff;
+            font-size: clamp(24px, 4vw, 40px);
+            letter-spacing: .5px;
+            background: var(--btn-brown);
+            cursor: pointer;
+            isolation: isolate;
+            box-shadow:
+                inset 0 2px 0 0 rgba(255, 255, 255, .06),
+                0 12px 24px rgba(0, 0, 0, .45);
+            transition: transform .15s ease;
+        }
+
+        .fire-btn:active {
+            transform: translateY(1px) scale(.99);
+        }
+
+        /* Leather texture overlay */
+        .fire-btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            mix-blend-mode: multiply;
+            opacity: .55;
+            background:
+                radial-gradient(120% 140% at 30% 20%, #7b4c31 0%, #6e4329 55%, #55301f 100%);
+            z-index: -1;
+        }
+
+        .fire-btn::after {
+            content: "";
+            position: absolute;
+            inset: 2px;
+            border-radius: 16px;
+            box-shadow:
+                inset 0 2px 0 rgba(255, 255, 255, .08),
+                inset 0 -2px 0 rgba(0, 0, 0, .35);
+            pointer-events: none;
+        }
+
+        .text {
+            display: inline-block;
+            position: relative;
+            filter: url(#heat-warp);
+        }
+
+        .char {
+            position: relative;
+            display: inline-block;
+            padding-inline: 1px;
+            text-shadow:
+                0 0 6px var(--glow1),
+                0 0 14px var(--glow2);
+            animation: glowFlicker 1.6s infinite steps(2, end);
+        }
+
+        .char:nth-child(odd) {
+            animation-duration: 1.3s;
+        }
+
+        @keyframes glowFlicker {
+
+            0%,
+            100% {
+                text-shadow:
+                    0 0 4px var(--glow1),
+                    0 0 10px var(--glow2),
+                    0 0 16px #ff7e2b;
+            }
+
+            50% {
+                text-shadow:
+                    0 0 8px var(--glow1),
+                    0 0 18px var(--glow2),
+                    0 0 28px #ff9b3b;
+            }
+        }
+
+        .fire-btn:hover {
+            box-shadow:
+                inset 0 2px 0 rgba(255, 255, 255, .06),
+                0 16px 30px rgba(0, 0, 0, .55);
+        }
+
+        .fire-btn,
+        .char {
+            color: #fff;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="fire-btn" aria-label="פתח את הספר">
+        <span class="text" id="fireText">פתח את הספר</span>
+    </button>
+
+    <!-- SVG filters for heat shimmer -->
+    <svg width="0" height="0" style="position:absolute">
+        <defs>
+            <filter id="heat-warp">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.045" numOctaves="2" seed="9">
+                    <animate attributeName="baseFrequency" dur="6s" values="0.012 0.04; 0.02 0.06; 0.012 0.04"
+                        repeatCount="indefinite" />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" scale="4" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+        </defs>
+    </svg>
+
+    <script>
+        // Split text into spans
+        const node = document.getElementById('fireText');
+        const chars = [...node.textContent];
+        node.innerHTML = chars.map(c => `<span class="char">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+    </script>
+
+</body>
+
+</html>

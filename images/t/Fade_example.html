@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Page Reveal</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+    }
+    .book-container {
+      position: relative;
+      width: 800px;
+      height: 550px;
+      margin: 30px auto;
+      background-image: url('./images/transparent_book.png');
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .reveal-image {
+      position: absolute;
+      left: 110px;
+      top: 10px;
+      width: 35%;
+      height: 50%;
+      opacity: 0;
+      background-image: url('./images/lions_jumping.png'); /* replace with your content */
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      animation: revealEffect 4s forwards;
+      mix-blend-mode: multiply; /* makes it look printed on paper */
+    }
+
+    @keyframes revealEffect {
+      0% {
+        filter: grayscale(100%) blur(8px);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        filter: grayscale(0%) blur(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="book-container">
+    <div class="reveal-image"></div>
+  </div>
+
+</body>
+</html>
