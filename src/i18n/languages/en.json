@@ -1,0 +1,131 @@
+{
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "practiceMode": "Practice Mode",
+    "contentLevel": "Content Level",
+    "fontSize": "Font Size",
+    "moreContent": "More Content",
+    "audio": "Audio",
+    "apply": "Apply",
+    "cancel": "Cancel",
+    "practiceOn": "On",
+    "practiceOff": "Off",
+    "fontSizes": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    },
+    "contentLevels": {
+      "level1": "Level 1",
+      "level2": "Level 2",
+      "level3": "Level 3"
+    },
+    "languages": {
+      "he": "עברית",
+      "en": "English",
+      "ar": "العربية"
+    },
+    "ariaLabels": {
+      "applySettings": "Apply settings and save changes",
+      "cancelSettings": "Cancel changes and close settings"
+    },
+    "success": "Success",
+    "error": "Error",
+    "settingsSaved": "Settings saved successfully",
+    "saveError": "Could not save settings. Please try again"
+  },
+  "chapters": {
+    "chapterLabel": "Chapter",
+    "chapter1": {
+      "preface": {
+        "title": "The Journey Begins"
+      }
+    },
+    "chapter2": {
+      "preface": {
+        "title": "The Path Unfolds"
+      }
+    },
+    "chapter3": {
+      "preface": {
+        "title": "New Discoveries"
+      }
+    }
+  },
+  "ui": {
+    "chapterSummary": {
+      "title": "Chapter Summary",
+      "completionMessage": "Well done! You have finished reading chapter",
+      "nextActionText": "What would you like to do now?",
+      "buttons": {
+        "repeatChapter": "Repeat Chapter",
+        "goToBeginning": "Go to Beginning",
+        "practice": "Practice"
+      },
+      "ariaLabels": {
+        "repeatChapter": "Return to the beginning of the chapter",
+        "goToBeginning": "Return to the beginning of the book",
+        "practice": "Review highlighted words"
+      }
+    },
+    "practiceModal": {
+      "title": "Words for Practice",
+      "emptyStateTitle": "Highlighted Words from Chapter",
+      "emptyStateText": "No highlighted words found",
+      "emptyStateSubtext": "This chapter has no highlighted words for practice",
+      "closeButton": "Close",
+      "errorTitle": "Error Loading Practice Window",
+      "errorText": "Sorry, an error occurred while loading the practice window.",
+      "errorSubtext": "Please try again or close the window."
+    },
+    "fullscreenModal": {
+      "title": "Return to Fullscreen",
+      "message": "For the best reading experience of the digital book,\nplease return to fullscreen mode",
+      "confirmButton": "Return to Fullscreen",
+      "okButton": "OK"
+    },
+    "orientationModal": {
+      "title": "Rotate to Portrait Mode",
+      "message": "For the best reading experience of the digital book,\nplease rotate your device to portrait mode\nand ensure the screen is in fullscreen",
+      "autoCloseMessage": "This window will close automatically when you rotate to portrait mode"
+    },
+    "openingPage": {
+      "bookTitle": "Puka & Mika",
+      "author": "By: Ran Banker",
+      "startButton": "Open the Book",
+      "termsOfUse": "Terms of Use",
+      "copyright": "Copyright Notice"
+    },
+    "introPage": {
+      "welcome": "Welcome",
+      "message": "For the best reading experience, the book will be displayed in fullscreen and portrait mode.",
+      "agreeButton": "Agree and Go to Fullscreen"
+    },
+    "bookIntroPage": {
+      "welcomeTo": "Welcome to",
+      "bookTitle": "The Adventures of Puka and Mika",
+      "objectives": "Book Objectives:",
+      "objective1": "Shared time between parent and child",
+      "objective2": "Strengthening the child's reading abilities",
+      "objective3": "Opportunity to practice pronunciation of sibilant letters",
+      "objective4": "Getting to know Puka and Mika",
+      "continueButton": "Continue",
+      "practiceOn": "On",
+      "practiceOff": "Off"
+    },
+    "termsModal": {
+      "title": "Terms of Use",
+      "content1": "The content in this book is protected by copyright and may not be copied or distributed without explicit permission from the author. Use of the book is intended for personal reading only.",
+      "content2": "All rights reserved to the author: Ran Banker",
+      "closeButton": "Close"
+    },
+    "copyrightModal": {
+      "title": "Copyright Notice",
+      "content1": "© All rights reserved to Ran Banker",
+      "content2": "The content, text, images and design in this book are protected by copyright. It is forbidden to copy, distribute, modify or use the content without explicit written permission from the author.",
+      "content3": "Copyright infringement may lead to legal action.",
+      "closeButton": "Close"
+    }
+  }
+}
