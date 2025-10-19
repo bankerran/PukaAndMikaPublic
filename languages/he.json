@@ -1,0 +1,131 @@
+{
+  "settings": {
+    "title": "הגדרות",
+    "language": "שפה",
+    "practiceMode": "מצב תרגול",
+    "contentLevel": "רמת תוכן",
+    "fontSize": "גודל גופן",
+    "moreContent": "תוכן נוסף",
+    "audio": "קול",
+    "apply": "החל",
+    "cancel": "ביטול",
+    "practiceOn": "פעיל",
+    "practiceOff": "כבוי",
+    "fontSizes": {
+      "small": "קטן",
+      "medium": "בינוני",
+      "large": "גדול"
+    },
+    "contentLevels": {
+      "level1": "רמה 1",
+      "level2": "רמה 2",
+      "level3": "רמה 3"
+    },
+    "languages": {
+      "he": "עברית",
+      "en": "English",
+      "ar": "العربية"
+    },
+    "ariaLabels": {
+      "applySettings": "החל הגדרות ושמור שינויים",
+      "cancelSettings": "בטל שינויים וסגור הגדרות"
+    },
+    "success": "הצלחה",
+    "error": "שגיאה",
+    "settingsSaved": "ההגדרות נשמרו בהצלחה",
+    "saveError": "לא ניתן לשמור הגדרות. נסה שוב"
+  },
+  "chapters": {
+    "chapterLabel": "פרק",
+    "chapter1": {
+      "preface": {
+        "title": "המפגש"
+      }
+    },
+    "chapter2": {
+      "preface": {
+        "title": "הדרך מתחילה"
+      }
+    },
+    "chapter3": {
+      "preface": {
+        "title": "גילויים חדשים"
+      }
+    }
+  },
+  "ui": {
+    "chapterSummary": {
+      "title": "סיכום פרק",
+      "completionMessage": "כל הכבוד! סיימתם לקרוא את פרק",
+      "nextActionText": "מה תרצו לעשות עכשיו?",
+      "buttons": {
+        "repeatChapter": "חזור על הפרק",
+        "goToBeginning": "תחילת הספר",
+        "practice": "תרגול"
+      },
+      "ariaLabels": {
+        "repeatChapter": "חזור לתחילת הפרק",
+        "goToBeginning": "חזור לתחילת הספר",
+        "practice": "חזרה על מילים מודגשות"
+      }
+    },
+    "practiceModal": {
+      "title": "מילים לתרגול",
+      "emptyStateTitle": "מילים מודגשות מהפרק",
+      "emptyStateText": "לא נמצאו מילים מודגשות",
+      "emptyStateSubtext": "בפרק זה אין מילים מודגשות לתרגול",
+      "closeButton": "סגור",
+      "errorTitle": "שגיאה בטעינת חלון התרגול",
+      "errorText": "מצטערים, אירעה שגיאה בטעינת חלון התרגול.",
+      "errorSubtext": "אנא נסה שוב או סגור את החלון."
+    },
+    "fullscreenModal": {
+      "title": "חזור למסך מלא",
+      "message": "לחוויית קריאה מיטבית של הספר הדיגיטלי,\nאנא חזור למצב מסך מלא",
+      "confirmButton": "חזור למסך מלא",
+      "okButton": "אישור"
+    },
+    "orientationModal": {
+      "title": "סובב למצב אנכי",
+      "message": "לחוויית קריאה מיטבית של הספר הדיגיטלי,\nאנא סובב את המכשיר למצב אנכי\nווודא שהמסך במצב מלא",
+      "autoCloseMessage": "החלון יסגר אוטומטית כשתסובב למצב אנכי"
+    },
+    "openingPage": {
+      "bookTitle": "פוקה ומיקה",
+      "author": "מאת: רן בנקר",
+      "startButton": "פתח את הספר",
+      "termsOfUse": "תנאי שימוש",
+      "copyright": "הודעת זכויות יוצרים"
+    },
+    "introPage": {
+      "welcome": "ברוכים הבאים",
+      "message": "לחוויית קריאה מיטבית, הספר יוצג במסך מלא ובמצב דיוקן.",
+      "agreeButton": "מסכים ועבור למסך מלא"
+    },
+    "bookIntroPage": {
+      "welcomeTo": "ברוכים הבאים ל",
+      "bookTitle": "עלילות פוקה ומיקה",
+      "objectives": "מטרות הספר:",
+      "objective1": "זמן משותף של ההורה עם הילד",
+      "objective2": "חיזוק יכולות הקריאה של הילד",
+      "objective3": "אפשרות לאימון על הגיית האותיות השורקות",
+      "objective4": "הכרות עם פוקה ומיקה",
+      "continueButton": "המשך",
+      "practiceOn": "פעיל",
+      "practiceOff": "כבוי"
+    },
+    "termsModal": {
+      "title": "תנאי שימוש",
+      "content1": "התוכן בספר זה מוגן בזכויות יוצרים ואסור להעתיקו או להפיצו ללא רשות מפורשת מהמחבר. השימוש בספר מיועד לקריאה אישית בלבד.",
+      "content2": "כל הזכויות שמורות למחבר: רן בנקר",
+      "closeButton": "סגור"
+    },
+    "copyrightModal": {
+      "title": "הודעת זכויות יוצרים",
+      "content1": "© כל הזכויות שמורות לרן בנקר",
+      "content2": "התוכן, הטקסט, התמונות והעיצוב בספר זה מוגנים בזכויות יוצרים. אסור להעתיק, להפיץ, לשנות או להשתמש בתוכן ללא רשות מפורשת בכתב מהמחבר.",
+      "content3": "הפרת זכויות יוצרים עלולה להוביל לתביעה משפטית.",
+      "closeButton": "סגור"
+    }
+  }
+}

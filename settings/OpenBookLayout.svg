@@ -1,0 +1,26 @@
+<svg id="eVFdu0y8PxH1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1820 1080" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" project-id="66cee6c7d90d4f489375d2ee9b2b6000" export-id="d6b766a164b14950bd56126566befffc" cached="false">
+  <rect width="516.80261" height="268.189233" rx="0" ry="0" transform="matrix(1.090877-.008801 0.008067 0.999967 317.817353 233.273565)" fill="none" stroke="#f00">
+    <title>Image top (blue)</title>
+  </rect>
+  <rect width="516.80261" height="268.189233" rx="0" ry="0" transform="matrix(1.090875-.008936 0.008191 0.999966 324.245203 521.073698)" fill="none" stroke="#00f">
+    <title>Image Bottom (orange)</title>
+  </rect>
+  <rect width="516.80261" height="268.189233" rx="0" ry="0" transform="matrix(1.090895-.006123 0.005613 0.999984 1007.330981 516.450932)" fill="none" stroke="#00ff80">
+    <title>Content Bottom (red)</title>
+  </rect>
+  <rect width="516.80261" height="268.189233" rx="0" ry="0" transform="matrix(1.090895-.006123 0.005613 0.999984 1005.825746 227.996419)" fill="none" stroke="#808080">
+    <title>Content Top (green)</title>
+  </rect>
+  <rect width="60.685155" height="43.071376" rx="0" ry="0" transform="matrix(1 0 0 1.25415 1618.727569 775.471642)" fill="none" stroke="#ff8000">
+    <title>Scroll Right (gray)</title>
+  </rect>
+  <rect width="60.685155" height="43.071376" rx="0" ry="0" transform="matrix(1 0 0 1.25415 240.587279 775.471641)" fill="none" stroke="#ff8000">
+    <title>Scroll left (magenta)</title>
+  </rect>
+  <rect width="66.557912" height="115.497553" rx="0" ry="0" transform="translate(166.199021 78.303426)" fill="none" stroke="#000">
+    <title>Menu</title>
+  </rect>
+  <rect width="1634.584013" height="802.610114" rx="0" ry="0" transform="matrix(1.027414 0 0 1 117.260336 74.515498)" fill="none" stroke="#000">
+    <title>Book Frame</title>
+  </rect>
+</svg>

@@ -1,0 +1,99 @@
+{
+    "language": {
+        "he": "rtl",
+        "en": "ltr",
+        "ar": "rtl"
+    },
+    "supportedLanguages": [
+        {
+            "code": "he",
+            "displayName": "Hebrew",
+            "nativeName": "עברית",
+            "direction": "rtl"
+        },
+        {
+            "code": "en",
+            "displayName": "English",
+            "nativeName": "English",
+            "direction": "ltr"
+        },
+        {
+            "code": "ar",
+            "displayName": "Arabic",
+            "nativeName": "العربية",
+            "direction": "rtl"
+        }
+    ],
+    "audio": [
+        "forest1.mp3",
+        "river2.mp3",
+        "openning1.mp3"
+    ],
+    "openning": {
+        "music": 2
+    },
+    "summary": {
+        "music": 2
+    },
+    "chapters": [
+        {
+            "Id": 1,
+            "preface": {
+                "titleKey": "chapters.chapter1.preface.title",
+                "img": "preface_first_meeting.webp",
+                "music": 1
+            },
+            "pages": [
+                {
+                    "Id": 1,
+                    "music": 0,
+                    "img": "page1_bot.webp",
+                    "position": "bot"
+                },
+                {
+                    "Id": 2,
+                    "music": 1,
+                    "img": "page2_bot.webp",
+                    "position": "bot"
+                },
+                {
+                    "Id": 3,
+                    "music": 0,
+                    "img": "page3_bot.webp",
+                    "position": "bot"
+                }
+            ]
+        }
+    ],
+    "credits": {
+        "audio": [
+            {
+                "mp3_name": "forest1.mp3",
+                "sound_url": "https://freesound.org/people/Motion_S/sounds/221758/",
+                "sound_name": "Ambient Forest Birds.wav",
+                "author_url": "https://freesound.org/people/Motion_S/",
+                "author_name": "Motion_S",
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "license_name": "Attribution 4.0"
+            },
+            {
+                "mp3_name": "river2.mp3",
+                "sound_url": "https://freesound.org/people/klankbeeld/sounds/635080/",
+                "sound_name": "river oyster catchers 1225PM 220421_0338.wav",
+                "author_url": "https://freesound.org/people/klankbeeld/",
+                "author_name": "klankbeeld",
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "license_name": "Attribution 4.0"
+            },
+            {
+                "mp3_name": "openning1.mp3",
+                "sound_url": "https://freesound.org/people/LightMister/sounds/642309/",
+                "sound_name": "Light Mister - Intro",
+                "author_url": "https://freesound.org/people/LightMister/",
+                "author_name": "LightMister",
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "license_name": "Attribution 4.0"
+            }
+        ]
+    }
+}
