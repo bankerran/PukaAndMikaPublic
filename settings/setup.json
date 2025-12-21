@@ -43,12 +43,6 @@
                 "img": "preface_first_meeting.webp",
                 "music": 1
             },
-            "Id": 1,
-            "preface": {
-                "titleKey": "chapters.chapter1.preface.title",
-                "img": "preface_first_meeting.webp",
-                "music": 1
-            },
             "pages": [
                 {
                     "Id": 1,

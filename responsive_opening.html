@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Book Background</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            color: white;
+            font-family: sans-serif;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #stage {
+            position: relative;
+            /* Dimensions will be set by JS */
+        }
+
+        #bg-image {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .overlay {
+            position: absolute;
+            /* Visual indicators for now */
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        #top_square {
+            border-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        #mid_square {
+            border-color: rgba(0, 0, 255, 0.8);
+            background-color: rgba(0, 0, 255, 0.2);
+        }
+
+        #bot_square {
+            border-color: rgba(0, 255, 0, 0.8);
+            background-color: rgba(0, 255, 0, 0.2);
+        }
+
+        #purple_square {
+            border-color: rgba(128, 0, 128, 0.8);
+            background-color: rgba(128, 0, 128, 0.2);
+        }
+
+        #orange_square {
+            border-color: rgba(255, 165, 0, 0.8);
+            background-color: rgba(255, 165, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="controls">
+            <label><input type="checkbox" id="ltr-toggle"> LTR Mode</label>
+        </div>
+        <div id="stage">
+            <img id="bg-image" src="" alt="Book Background">
+            <div id="top_square" class="overlay"></div>
+            <div id="mid_square" class="overlay"></div>
+            <div id="bot_square" class="overlay"></div>
+            <div id="purple_square" class="overlay"></div>
+            <div id="orange_square" class="overlay"></div>
+        </div>
+    </div>
+    <script>
+        const config = {
+            portrait: {
+                src: 'images/openning/closed_book.rtl.jpg',
+                ltrSrc: 'images/openning/closed_book.ltr.jpg',
+                width: 681,
+                height: 1024,
+                overlays: {
+                    top_square: { x: 136, y: 182, w: 410, h: 70 },
+                    // Mid (Blue): Widen slightly (w+5px) to cover right edge pixels.
+                    mid_square: { x: 180, y: 350, w: 305, h: 300 },
+                    orange_square: { x: 238, y: 705, w: 205, h: 53 },
+                    bot_square: { x: 136, y: 790, w: 410, h: 35 },
+                    purple_square: { x: 136, y: 856, w: 410, h: 35 }
+                }
+            },
+            landscape: {
+                src: 'images/openning/closed_book.landscape_rtl.jpg',
+                ltrSrc: 'images/openning/closed_book.landscape_ltr.jpg',
+                width: 1024,
+                height: 621,
+                overlays: {
+                    top_square: { x: 276, y: 45, w: 441, h: 46 },
+                    mid_square: { x: 370, y: 111, w: 253, h: 223 },
+                    bot_square: { x: 276, y: 445, w: 441, h: 46 },
+                    orange_square: { x: 386, y: 366, w: 220, h: 46 },
+                    purple_square: { x: 276, y: 533, w: 441, h: 46 }
+                }
+            }
+        };
+
+        const stage = document.getElementById('stage');
+        const bgImage = document.getElementById('bg-image');
+        const ltrToggle = document.getElementById('ltr-toggle');
+        const overlays = {
+            top_square: document.getElementById('top_square'),
+            mid_square: document.getElementById('mid_square'),
+            bot_square: document.getElementById('bot_square'),
+            purple_square: document.getElementById('purple_square'),
+            orange_square: document.getElementById('orange_square')
+        };
+
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        function updateLayout() {
+            const isLTR = ltrToggle.checked;
+            const winW = window.innerWidth;
+            const winH = window.innerHeight;
+            const winAspect = winW / winH;
+
+            let mode = 'portrait';
+
+            if (isMobile()) {
+                mode = 'portrait';
+            } else {
+                if (winW > winH) {
+                    mode = 'landscape';
+                } else {
+                    mode = 'portrait';
+                }
+            }
+
+            const currentConfig = config[mode];
+
+            // Choose Source
+            const newSrc = isLTR ? currentConfig.ltrSrc : currentConfig.src;
+            if (bgImage.getAttribute('src') !== newSrc) {
+                bgImage.setAttribute('src', newSrc);
+            }
+
+            const imgW = currentConfig.width;
+            const imgH = currentConfig.height;
+            const imgAspect = imgW / imgH;
+
+            let renderW, renderH;
+
+            if (winAspect > imgAspect) {
+                renderH = winH;
+                renderW = renderH * imgAspect;
+            } else {
+                renderW = winW;
+                renderH = renderW / imgAspect;
+            }
+
+            stage.style.width = `${renderW}px`;
+            stage.style.height = `${renderH}px`;
+
+            for (const [key, el] of Object.entries(overlays)) {
+                if (!el) continue;
+                const data = currentConfig.overlays[key];
+                if (data) {
+                    // Calculate X. If LTR, mirror it.
+                    let x = data.x;
+                    let y = data.y;
+
+                    if (isLTR) {
+                        x = imgW - data.x - data.w;
+
+                        // FIX: Portrait LTR specific adjustment for mid_square
+                        if (mode === 'portrait' && key === 'mid_square') {
+                            // "Positioned lower and a bit to the left"
+                            y += 15; // Move lower
+                            x -= 10; // Move left (visually)
+                        }
+                    }
+
+                    el.style.left = `${(x / imgW) * 100}%`;
+                    el.style.top = `${(y / imgH) * 100}%`;
+                    el.style.width = `${(data.w / imgW) * 100}%`;
+                    el.style.height = `${(data.h / imgH) * 100}%`;
+                    el.style.display = 'block';
+                } else {
+                    el.style.display = 'none';
+                }
+            }
+        }
+
+        window.addEventListener('resize', updateLayout);
+        window.addEventListener('load', updateLayout);
+        ltrToggle.addEventListener('change', updateLayout);
+
+        updateLayout();
+    </script>
+</body>
+
+</html>
