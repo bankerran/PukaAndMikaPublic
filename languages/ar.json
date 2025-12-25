@@ -61,12 +61,14 @@
       "buttons": {
         "repeatChapter": "إعادة الفصل",
         "goToBeginning": "العودة للبداية",
-        "practice": "التدريب"
+        "practice": "التدريب",
+        "settings": "الإعدادات"
       },
       "ariaLabels": {
         "repeatChapter": "العودة إلى بداية الفصل",
         "goToBeginning": "العودة إلى بداية الكتاب",
-        "practice": "مراجعة الكلمات المميزة"
+        "practice": "مراجعة الكلمات المميزة",
+        "settings": "افتح نافذة الإعدادات"
       }
     },
     "practiceModal": {

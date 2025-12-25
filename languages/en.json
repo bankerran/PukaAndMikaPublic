@@ -61,12 +61,14 @@
       "buttons": {
         "repeatChapter": "Repeat Chapter",
         "goToBeginning": "Go to Beginning",
-        "practice": "Practice"
+        "practice": "Practice",
+        "settings": "Settings"
       },
       "ariaLabels": {
         "repeatChapter": "Return to the beginning of the chapter",
         "goToBeginning": "Return to the beginning of the book",
-        "practice": "Review highlighted words"
+        "practice": "Review highlighted words",
+        "settings": "Open settings window"
       }
     },
     "practiceModal": {

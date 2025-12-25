@@ -61,12 +61,14 @@
       "buttons": {
         "repeatChapter": "חזור על הפרק",
         "goToBeginning": "תחילת הספר",
-        "practice": "תרגול"
+        "practice": "תרגול",
+        "settings": "הגדרות"
       },
       "ariaLabels": {
         "repeatChapter": "חזור לתחילת הפרק",
         "goToBeginning": "חזור לתחילת הספר",
-        "practice": "חזרה על מילים מודגשות"
+        "practice": "חזרה על מילים מודגשות",
+        "settings": "פתח חלון הגדרות"
       }
     },
     "practiceModal": {
