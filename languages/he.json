@@ -44,19 +44,19 @@
     },
     "chapter2": {
       "preface": {
-        "title": "הדרך מתחילה"
+        "title": "מגניפיסוס"
       }
     },
     "chapter3": {
       "preface": {
-        "title": "גילויים חדשים"
+        "title": "בית מגניפיסוס"
       }
     }
   },
   "ui": {
     "chapterSummary": {
-      "title": "סיכום פרק",
-      "completionMessage": "כל הכבוד! סיימתם לקרוא את פרק",
+      "title": "פרק",
+      "completionMessage": "סיימתם לקרוא את פרק",
       "nextActionText": "מה תרצו לעשות עכשיו?",
       "buttons": {
         "repeatChapter": "חזור על הפרק",

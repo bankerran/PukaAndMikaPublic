@@ -44,19 +44,19 @@
     },
     "chapter2": {
       "preface": {
-        "title": "The Path Unfolds"
+        "title": "Magnifisos"
       }
     },
     "chapter3": {
       "preface": {
-        "title": "New Discoveries"
+        "title": "Magnifisos' Home"
       }
     }
   },
   "ui": {
     "chapterSummary": {
       "title": "Chapter Summary",
-      "completionMessage": "Well done! You have finished reading chapter",
+      "completionMessage": "You have finished reading chapter",
       "nextActionText": "What would you like to do now?",
       "buttons": {
         "repeatChapter": "Repeat Chapter",

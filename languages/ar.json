@@ -44,19 +44,19 @@
     },
     "chapter2": {
       "preface": {
-        "title": "يتكشف الطريق"
+        "title": "مغنيفيسوس"
       }
     },
     "chapter3": {
       "preface": {
-        "title": "اكتشافات جديدة"
+        "title": "مغنيفيسوس"
       }
     }
   },
   "ui": {
     "chapterSummary": {
       "title": "ملخص الفصل",
-      "completionMessage": "أحسنت! لقد انتهيت من قراءة الفصل",
+      "completionMessage": " لقد انتهيت من قراءة الفصل",
       "nextActionText": "ماذا تريد أن تفعل الآن؟",
       "buttons": {
         "repeatChapter": "إعادة الفصل",
